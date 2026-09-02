@@ -1,0 +1,83 @@
+[run]
+run_id = "nanoclassify_banking77_gepa_oss20b_v2"
+output_dir = "/Users/joshuapurtell/GitHub/nanoclassify/artifacts/gepa/runs"
+seed = 20260907
+
+[container]
+url = "http://127.0.0.1:18877"
+startup_timeout_seconds = 90
+
+[taskset]
+train_split = "train"
+heldout_split = "heldout"
+train_ids = ["train:100", "train:101", "train:102", "train:103", "train:104", "train:105", "train:106", "train:107", "train:108", "train:109", "train:110", "train:111", "train:112", "train:113", "train:114", "train:115", "train:116", "train:117", "train:118", "train:119", "train:120", "train:121", "train:122", "train:123", "train:124", "train:125", "train:126", "train:127", "train:128", "train:129", "train:130", "train:131"]
+heldout_ids = ["test:200", "test:201", "test:202", "test:203", "test:204", "test:205", "test:206", "test:207", "test:208", "test:209", "test:210", "test:211", "test:212", "test:213", "test:214", "test:215"]
+
+[candidate]
+target_modules = ["classification_system_prompt"]
+
+[seed_candidate]
+classification_system_prompt = "You classify one Banking77 customer message. Return exactly one label from the allowed list, with no explanation, punctuation, markdown, or extra whitespace. Use the most specific intent supported by the message. Distinguish pending, failed, declined, and reverted operations; distinguish card payment, cash withdrawal, transfer, direct debit, and top-up; and distinguish asking how to obtain something from reporting that an existing thing is not working."
+
+[policy]
+provider = "openai"
+model = "openai/gpt-oss-20b"
+api_key_env = "GEPA_STUDENT_API_KEY"
+base_url = "http://127.0.0.1:1/cap/wcap_local_tinker/v1"
+proxy_mode = "proxy_only"
+credential_mode = "byok"
+max_tokens = 1024
+
+[policy.config]
+effort = "low"
+answer_max_tokens = 1024
+
+[proposer]
+backend = "codex_app_server"
+runtime_substrate = "local"
+execution_mode = "local_process"
+provider = "openai"
+auth_mode = "chatgpt"
+copy_host_auth = true
+codex_home = "/Users/joshuapurtell/.codex"
+model = "gpt-5.4-mini"
+reasoning_effort = "medium"
+timeout_seconds = 900
+message_stall_timeout_seconds = 300
+sandbox_mode = "workspace-write"
+approval_policy = "never"
+
+[proposer.prompt]
+best_practices_path = "/Users/joshuapurtell/GitHub/nanoclassify/prompts/gepa-banking77-best-practices.md"
+
+[gepa]
+max_generations = 2
+proposals_per_generation = 2
+minibatch_size = 16
+max_total_rollouts = 250
+max_train_rollouts = 220
+max_heldout_rollouts = 30
+max_cost_usd = 0.0
+max_time_seconds = 3600
+rollout_estimated_wall_seconds = 5
+minibatch_acceptance_criterion = "primary_improvement"
+acceptance_criterion = "primary_improvement"
+rollout_submission_mode = "sync"
+
+[gepa.task_pools]
+pareto = ["train:100", "train:101", "train:102", "train:103", "train:104", "train:105", "train:106", "train:107", "train:108", "train:109", "train:110", "train:111", "train:112", "train:113", "train:114", "train:115", "train:116", "train:117", "train:118", "train:119", "train:120", "train:121", "train:122", "train:123", "train:124", "train:125", "train:126", "train:127", "train:128", "train:129", "train:130", "train:131"]
+minibatch = ["train:100", "train:101", "train:102", "train:103", "train:104", "train:105", "train:106", "train:107", "train:108", "train:109", "train:110", "train:111", "train:112", "train:113", "train:114", "train:115"]
+reflection = ["train:100", "train:101", "train:102", "train:103", "train:104", "train:105", "train:106", "train:107", "train:108", "train:109", "train:110", "train:111", "train:112", "train:113", "train:114", "train:115"]
+heldout = ["test:200", "test:201", "test:202", "test:203", "test:204", "test:205", "test:206", "test:207", "test:208", "test:209", "test:210", "test:211", "test:212", "test:213", "test:214", "test:215"]
+
+[gepa.pipeline]
+mode = "sync_serial"
+max_in_flight_candidates = 1
+
+[gepa.pipeline.workers]
+propose = 1
+rollout = 50
+evaluate = 1
+
+[cache]
+mode = "off"

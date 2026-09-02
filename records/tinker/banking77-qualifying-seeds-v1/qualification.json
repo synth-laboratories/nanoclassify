@@ -1,0 +1,22 @@
+{
+  "correctness_histogram": {
+    "0": 80,
+    "1": 25,
+    "2": 30,
+    "3": 34,
+    "4": 29,
+    "5": 38,
+    "6": 75,
+    "7": 135,
+    "8": 554
+  },
+  "private_manifest_sha256": "sha256:79c0f350bc1c7b335970b5522d60bdd3294d6f61d2895f05b5cfa44e22b1c640",
+  "qualification_correctness_range": [
+    1,
+    5
+  ],
+  "qualification_prompt_groups": 1000,
+  "qualification_rollouts_per_seed": 8,
+  "qualifying_seed_count": 156,
+  "schema": "nanoclassify.seed-qualification-receipt.v1"
+}

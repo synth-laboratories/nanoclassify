@@ -1,0 +1,7 @@
+{
+  "qualifying_manifest_sha256": "sha256:79c0f350bc1c7b335970b5522d60bdd3294d6f61d2895f05b5cfa44e22b1c640",
+  "rollouts_per_prompt": 64,
+  "schema": "nanoclassify.cispo-qualified-seed-rollouts.v1",
+  "seed_groups": 156,
+  "total_rollouts": 9984
+}

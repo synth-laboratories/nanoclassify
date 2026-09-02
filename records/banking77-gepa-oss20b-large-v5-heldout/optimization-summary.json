@@ -1,0 +1,22 @@
+{
+  "canonical_locked_accuracy": 0.4475,
+  "canonical_locked_correct": 179,
+  "canonical_locked_macro_f1": 0.48185149669106886,
+  "canonical_locked_size": 400,
+  "canonical_locked_valid_label_rate": 0.9725,
+  "internal_frontier_reward": 0.7425,
+  "internal_seed_reward": 0.7375,
+  "internal_size": 400,
+  "minibatch_frontier_reward": 0.7725,
+  "minibatch_seed_reward": 0.695,
+  "minibatch_size": 400,
+  "optimizers_commit": "eaead59b03118fb3eaede1467e3ead9ab015b12b",
+  "optimizers_version": "0.2.19",
+  "parallelism": 50,
+  "prompt_sha256": "sha256:daf1abad0d8f730a5a9a545a0ba848accb2fcb340432c2d7e3543e2b1d33568d",
+  "schema_version": "nanoclassify.gepa-large-seed-summary.v1",
+  "task_model": "openai/gpt-oss-20b",
+  "train_frontier_reward": 0.7533333333333333,
+  "train_seed_reward": 0.7575,
+  "train_size": 1200
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CISPO training reward</title>
+<style>
+:root{--paper:#f3f0e7;--ink:#171712;--muted:#67665d;--olive:#788600;--acid:#dfff42;--grid:#cbc8ba}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+main{padding:34px 42px 28px;min-height:100vh}header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px}
+h1{font:800 clamp(27px,4vw,48px)/1 Arial,sans-serif;letter-spacing:-.045em;margin:0}.meta{color:var(--muted);font-size:12px;text-align:right}
+.chart{position:relative;background:rgba(255,255,255,.18);border:1px solid var(--grid);padding:18px 18px 8px}svg{display:block;width:100%;height:auto}
+.tooltip{position:fixed;display:none;background:var(--ink);color:var(--paper);padding:8px 10px;font-size:12px;pointer-events:none}
+.legend{display:flex;gap:24px;margin:14px 0 0;font-size:12px}.key{display:flex;align-items:center;gap:8px}.swatch{width:30px;height:4px;background:var(--olive)}.swatch.mean{background:var(--ink);height:6px}
+.note{color:var(--muted);font-size:11px;margin:12px 0 0}.summary{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--grid);border-top:0}.summary div{padding:15px;border-right:1px solid var(--grid)}.summary div:last-child{border:0}.summary b{display:block;font:700 23px Arial,sans-serif}.summary span{font-size:10px;color:var(--muted)}
+@media(max-width:700px){main{padding:22px 16px}header{align-items:flex-start;flex-direction:column}.meta{text-align:left}.summary{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><main><header><div><div style="font-size:11px;letter-spacing:.14em;margin-bottom:8px">BANKING77 · GPT-OSS-20B</div><h1>CISPO training reward</h1></div><div class="meta">16 rollouts/group · qualifying range 1–5 correct<br>offline rewards · shuffled minibatches</div></header>
+<div class="chart"><svg id="plot" viewBox="0 0 1100 550" role="img" aria-label="CISPO batch and cumulative mean reward by optimizer update"></svg>
+<div class="legend"><div class="key"><i class="swatch"></i>batch mean</div><div class="key"><i class="swatch mean"></i>cumulative mean</div><div class="key"><i class="swatch" style="background:var(--acid);height:14px;opacity:.5"></i>eligible reward range</div></div>
+<p class="note">Rewards were sampled once from the SFT parent before training. This is the reward composition of each optimizer minibatch, not an on-policy learning curve.</p></div>
+<div class="summary"><div><b>1,000</b><span>SEED GROUPS</span></div><div><b>16,000</b><span>TOTAL ROLLOUTS</span></div><div><b>95</b><span>QUALIFYING GROUPS</span></div><div><b>1,520</b><span>TRAJECTORIES TRAINED</span></div></div>
+</main><div class="tooltip" id="tip"></div>
+<script>
+const rewards=[.109375,.125,.171875,.265625,.265625,.234375,.140625,.140625,.203125,.109375,.078125,.28125,.125,.25,.15625,.203125,.1875,.09375,.234375,.21875,.1875,.234375,.25,.25];
+const means=rewards.map((_,i)=>rewards.slice(0,i+1).reduce((a,b)=>a+b,0)/(i+1));
+const svg=document.querySelector('#plot'),NS='http://www.w3.org/2000/svg',W=1100,H=550,m={l:72,r:28,t:28,b:58},max=.35;
+const x=i=>m.l+i/(rewards.length-1)*(W-m.l-m.r), y=v=>H-m.b-v/max*(H-m.t-m.b);
+const el=(name,attrs={})=>{const n=document.createElementNS(NS,name);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);return n};
+svg.append(el('rect',{x:m.l,y:y(5/16),width:W-m.l-m.r,height:y(1/16)-y(5/16),fill:'#dfff42',opacity:'.18'}));
+for(let v=0;v<=.35;v+=.05){svg.append(el('line',{x1:m.l,y1:y(v),x2:W-m.r,y2:y(v),stroke:'#cbc8ba','stroke-width':1}));const t=el('text',{x:m.l-14,y:y(v)+5,'text-anchor':'end',fill:'#67665d','font-size':13});t.textContent=v.toFixed(2);svg.append(t)}
+for(const i of [0,4,9,14,19,23]){const t=el('text',{x:x(i),y:H-m.b+28,'text-anchor':'middle',fill:'#67665d','font-size':13});t.textContent=i+1;svg.append(t)}
+const path=vals=>vals.map((v,i)=>(i?'L':'M')+x(i)+','+y(v)).join(' ');
+svg.append(el('path',{d:path(rewards),fill:'none',stroke:'#788600','stroke-width':4,'stroke-linejoin':'round'}));
+svg.append(el('path',{d:path(means),fill:'none',stroke:'#171712','stroke-width':6,'stroke-linejoin':'round'}));
+const tip=document.querySelector('#tip');rewards.forEach((v,i)=>{const c=el('circle',{cx:x(i),cy:y(v),r:6,fill:'#788600',tabindex:0});c.addEventListener('mouseenter',e=>{tip.style.display='block';tip.textContent=`update ${i+1} · batch ${v.toFixed(3)} · cumulative ${means[i].toFixed(3)}`;tip.style.left=e.clientX+14+'px';tip.style.top=e.clientY+14+'px'});c.addEventListener('mouseleave',()=>tip.style.display='none');svg.append(c)});
+const label=el('text',{x:(m.l+W-m.r)/2,y:H-8,'text-anchor':'middle',fill:'#171712','font-size':14});label.textContent='optimizer update';svg.append(label);
+</script></body></html>

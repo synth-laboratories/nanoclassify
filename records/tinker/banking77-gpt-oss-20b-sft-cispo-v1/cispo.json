@@ -1,0 +1,200 @@
+{
+  "history": [
+    {
+      "mean_reward": 0.7578125,
+      "metrics": {
+        "clock_cycle:unique": 1776828.0,
+        "e_frac_oversubscribed:mean": 0.3059895932674408,
+        "e_frac_with_tokens:mean": 0.9036458730697632,
+        "e_max_violation:max": 5.946743011474609,
+        "e_max_violation:mean": 4.200612545013428,
+        "e_min_violation:mean": -0.9938013553619385,
+        "loss:sum": -1.4125816598534584
+      },
+      "mixed_groups": 9,
+      "sampler_checkpoint": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/sampler_weights/nanoclassify-banking77-sft-sampler",
+      "trajectories_trained": 36,
+      "update": 1
+    },
+    {
+      "mean_reward": 0.78125,
+      "metrics": {
+        "clock_cycle:unique": 1776832.0,
+        "e_frac_oversubscribed:mean": 0.3098958432674408,
+        "e_frac_with_tokens:mean": 0.9127604365348816,
+        "e_max_violation:max": 5.953092575073242,
+        "e_max_violation:mean": 4.191296577453613,
+        "e_min_violation:mean": -0.99351567029953,
+        "loss:sum": -2.6428146716207266
+      },
+      "mixed_groups": 13,
+      "sampler_checkpoint": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/sampler_weights/nanoclassify-banking77-sft-sampler",
+      "trajectories_trained": 52,
+      "update": 2
+    },
+    {
+      "mean_reward": 0.8203125,
+      "metrics": {
+        "clock_cycle:unique": 1776837.0,
+        "e_frac_oversubscribed:mean": 0.3072916865348816,
+        "e_frac_with_tokens:mean": 0.8997396230697632,
+        "e_max_violation:max": 5.962665557861328,
+        "e_max_violation:mean": 4.208484172821045,
+        "e_min_violation:mean": -0.9938110709190369,
+        "loss:sum": -1.1572828064090572
+      },
+      "mixed_groups": 5,
+      "sampler_checkpoint": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/sampler_weights/nanoclassify-banking77-sft-sampler",
+      "trajectories_trained": 20,
+      "update": 3
+    },
+    {
+      "mean_reward": 0.7578125,
+      "metrics": {
+        "clock_cycle:unique": 1776841.0,
+        "e_frac_oversubscribed:mean": 0.3072916865348816,
+        "e_frac_with_tokens:mean": 0.9049479365348816,
+        "e_max_violation:max": 5.968344688415527,
+        "e_max_violation:mean": 4.199672222137451,
+        "e_min_violation:mean": -0.9937716722488403,
+        "loss:sum": -2.3882733592763543
+      },
+      "mixed_groups": 10,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u004",
+      "trajectories_trained": 40,
+      "update": 4
+    },
+    {
+      "mean_reward": 0.7890625,
+      "metrics": {
+        "clock_cycle:unique": 1776850.0,
+        "e_frac_oversubscribed:mean": 0.3046875,
+        "e_frac_with_tokens:mean": 0.9049479365348816,
+        "e_max_violation:max": 5.9838643074035645,
+        "e_max_violation:mean": 4.206978797912598,
+        "e_min_violation:mean": -0.9939042925834656,
+        "loss:sum": -0.34057453740388155
+      },
+      "mixed_groups": 6,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u004",
+      "trajectories_trained": 24,
+      "update": 5
+    },
+    {
+      "mean_reward": 0.7890625,
+      "metrics": {
+        "clock_cycle:unique": 1776853.0,
+        "e_frac_oversubscribed:mean": 0.3033854365348816,
+        "e_frac_with_tokens:mean": 0.90625,
+        "e_max_violation:max": 5.968108177185059,
+        "e_max_violation:mean": 4.2162017822265625,
+        "e_min_violation:mean": -0.9936550855636597,
+        "loss:sum": -1.337189264013432
+      },
+      "mixed_groups": 6,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u004",
+      "trajectories_trained": 24,
+      "update": 6
+    },
+    {
+      "mean_reward": 0.7734375,
+      "metrics": {
+        "clock_cycle:unique": 1776857.0,
+        "e_frac_oversubscribed:mean": 0.3059895932674408,
+        "e_frac_with_tokens:mean": 0.9127604365348816,
+        "e_max_violation:max": 5.96464729309082,
+        "e_max_violation:mean": 4.198338508605957,
+        "e_min_violation:mean": -0.9935585260391235,
+        "loss:sum": -2.4903325084596872
+      },
+      "mixed_groups": 12,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u004",
+      "trajectories_trained": 48,
+      "update": 7
+    },
+    {
+      "mean_reward": 0.796875,
+      "metrics": {
+        "clock_cycle:unique": 1776860.0,
+        "e_frac_oversubscribed:mean": 0.3033854365348816,
+        "e_frac_with_tokens:mean": 0.8997396230697632,
+        "e_max_violation:max": 5.983009338378906,
+        "e_max_violation:mean": 4.209269046783447,
+        "e_min_violation:mean": -0.9939643740653992,
+        "loss:sum": -1.163871175609529
+      },
+      "mixed_groups": 4,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u008",
+      "trajectories_trained": 16,
+      "update": 8
+    },
+    {
+      "mean_reward": 0.90625,
+      "metrics": {
+        "clock_cycle:unique": 1776867.0,
+        "e_frac_oversubscribed:mean": 0.30859375,
+        "e_frac_with_tokens:mean": 0.90234375,
+        "e_max_violation:max": 5.962451934814453,
+        "e_max_violation:mean": 4.1930952072143555,
+        "e_min_violation:mean": -0.9937912821769714,
+        "loss:sum": -1.2164428210817277
+      },
+      "mixed_groups": 5,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u008",
+      "trajectories_trained": 20,
+      "update": 9
+    },
+    {
+      "mean_reward": 0.7421875,
+      "metrics": {
+        "clock_cycle:unique": 1776869.0,
+        "e_frac_oversubscribed:mean": 0.3098958432674408,
+        "e_frac_with_tokens:mean": 0.8997396230697632,
+        "e_max_violation:max": 5.962866306304932,
+        "e_max_violation:mean": 4.189576625823975,
+        "e_min_violation:mean": -0.9937025308609009,
+        "loss:sum": -0.9868225720711052
+      },
+      "mixed_groups": 3,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u008",
+      "trajectories_trained": 12,
+      "update": 10
+    },
+    {
+      "mean_reward": 0.8671875,
+      "metrics": {
+        "clock_cycle:unique": 1776875.0,
+        "e_frac_oversubscribed:mean": 0.3059895932674408,
+        "e_frac_with_tokens:mean": 0.90234375,
+        "e_max_violation:max": 5.950370788574219,
+        "e_max_violation:mean": 4.2093329429626465,
+        "e_min_violation:mean": -0.9936899542808533,
+        "loss:sum": -1.2023951159790158
+      },
+      "mixed_groups": 8,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u008",
+      "trajectories_trained": 32,
+      "update": 11
+    },
+    {
+      "mean_reward": 0.8125,
+      "metrics": {
+        "clock_cycle:unique": 1776883.0,
+        "e_frac_oversubscribed:mean": 0.3046875,
+        "e_frac_with_tokens:mean": 0.9114583730697632,
+        "e_max_violation:max": 5.958470344543457,
+        "e_max_violation:mean": 4.208112716674805,
+        "e_min_violation:mean": -0.9936733245849609,
+        "loss:sum": -1.5531144738197327
+      },
+      "mixed_groups": 11,
+      "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u012",
+      "trajectories_trained": 44,
+      "update": 12
+    }
+  ],
+  "parent_sampler": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/sampler_weights/nanoclassify-banking77-sft-sampler",
+  "sampler_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/sampler_weights/nanoclassify-banking77-cispo-u012",
+  "schema": "nanoclassify.tinker-cispo.v1",
+  "state_checkpoint": "tinker://e7487834-b06c-59cb-b427-081c1ecc2790:train:1/weights/nanoclassify-banking77-cispo-state"
+}

@@ -1,0 +1,22 @@
+{
+  "best_candidate_id": "gepa_ae4f1c158a5b",
+  "candidate_count": 5,
+  "failed_rollouts": 0,
+  "heldout_correct": 8,
+  "heldout_reward": 0.5,
+  "heldout_size": 16,
+  "optimizers_commit": "eaead59b03118fb3eaede1467e3ead9ab015b12b",
+  "optimizers_version": "0.2.19",
+  "prompt_sha256": "sha256:796fb9a4b7d118e84f7040114ce129eb39558545d05a296402e752903c193acb",
+  "proposer_calls": 2,
+  "proposed_candidates": 4,
+  "retained_seed": true,
+  "rollout_calls": 128,
+  "run_id": "nanoclassify_banking77_gepa_oss20b_v2",
+  "schema_version": "nanoclassify.gepa-optimization-summary.v1",
+  "task_model": "openai/gpt-oss-20b",
+  "total_tokens": 340497,
+  "train_correct": 25,
+  "train_reward": 0.78125,
+  "train_size": 32
+}

@@ -1,0 +1,9 @@
+{
+  "dev_count": 770,
+  "dev_digest": "sha256:9551546b37733a113822e00008114f50211345fe885842c47813fa413a5f04c1",
+  "schema": "nanoclassify.training-split.v1",
+  "seed": 20260907,
+  "source_digest": "sha256:e1f4a17db93cfa7d4cc9370225eafa4a128073ff9f8ff6afbd0f628a7cea4ad7",
+  "train_count": 9233,
+  "train_digest": "sha256:7ae5551c1f767797432de14a690004e6cee8f0865d6a3fb86ee40443dc8aead5"
+}

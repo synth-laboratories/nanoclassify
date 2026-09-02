@@ -1,0 +1,32 @@
+{
+  "correctness_histogram": {
+    "0": 54,
+    "1": 21,
+    "10": 22,
+    "11": 31,
+    "12": 36,
+    "13": 44,
+    "14": 55,
+    "15": 145,
+    "16": 455,
+    "2": 14,
+    "3": 24,
+    "4": 16,
+    "5": 20,
+    "6": 15,
+    "7": 10,
+    "8": 21,
+    "9": 17
+  },
+  "eligible_correctness_range": [
+    1,
+    5
+  ],
+  "eligible_groups": 95,
+  "eligible_rollouts": 1520,
+  "parent_sampler": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/sampler_weights/nanoclassify-banking77-sft-sampler",
+  "prompt_groups": 1000,
+  "rollouts_per_prompt": 16,
+  "schema": "nanoclassify.cispo-upfront-collection.v1",
+  "total_rollouts": 16000
+}

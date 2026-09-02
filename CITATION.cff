@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use NanoClassify, please cite this repository."
+title: "NanoClassify: Reproducible hill climbing for language-model classification"
+type: software
+authors:
+  - family-names: Purtell
+    given-names: Joshua
+  - name: Synth Laboratories
+repository-code: "https://github.com/synth-laboratories/nanoclassify"
+license: MIT
+version: 0.1.0
+date-released: 2026-09-02

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NanoClassify: an open challenge for reproducible language-model classification hill climbing.">
+<meta property="og:title" content="NanoClassify — climb classification"><meta property="og:description" content="Fixed data, sealed evaluation, exact labels, and honest receipts."><meta property="og:type" content="website"><meta property="og:url" content="https://synth-laboratories.github.io/nanoclassify/">
+<meta name="theme-color" content="#dfff42"><link rel="canonical" href="https://synth-laboratories.github.io/nanoclassify/"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>NanoClassify — climb classification</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="leaderboard.css"></head>
+<body><main>
+<nav><a class="mark" href="#">NANOCLASSIFY</a><a href="#challenge">Challenge</a><a href="#leaderboard">Leaderboard</a><a href="#tracks">Tracks</a><a href="https://github.com/synth-laboratories/nanoclassify">GitHub ↗</a></nav>
+<header><p class="eyebrow">A SYNTH LABORATORIES OPEN RESEARCH CHALLENGE</p>
+<h1>Make small language models <em>classify better.</em></h1>
+<p class="lede">A legible hill climb from prompt baselines to SFT and policy optimization—fixed data, sealed evaluation, exact labels, honest receipts.</p>
+<div class="actions"><a class="primary" href="https://github.com/synth-laboratories/nanoclassify#readme">Start climbing</a><a href="https://github.com/synth-laboratories/nanoclassify/tree/main/submissions">View recipes</a></div></header>
+<section id="challenge"><p class="eyebrow">REFERENCE CLIMB · BANKING77</p><div class="score"><div><b>35.25%</b><span>GPT-OSS-20B base<br>hard heldout</span></div><div class="arrow">→</div><div><b>51.25%</b><span>GPT-OSS-20B SFT<br>same hard heldout</span></div></div><p class="fine">+16.00 accuracy points. One sealed promotion evaluation; no test-set tuning.</p></section>
+<section id="leaderboard"><p class="eyebrow">DEVELOPMENT LEADERBOARD · 400 FIXED EXAMPLES</p><div class="board"><div class="board-head"><span>#</span><span>Submission</span><span>Accuracy</span><span>Macro-F1</span></div><div class="board-row leader"><span>1</span><span><b>SFT + CISPO v5</b><small>64 rollouts · 50 updates</small></span><span>87.75%</span><span>86.78%</span></div><div class="board-row"><span>2</span><span><b>SFT v1</b><small>rank-16 LoRA</small></span><span>87.50%</span><span>86.29%</span></div></div><p class="fine">Development rankings guide iteration. Sealed-heldout rankings remain separate; CISPO v5 has not consumed a heldout evaluation.</p></section>
+<section id="tracks"><p class="eyebrow">FOUR TRACKS</p><div class="grid"><article><b>Banking77</b><span>Customer intent · primary</span></article><article><b>ChemProt</b><span>Chemical–protein relations</span></article><article><b>DDI2013</b><span>Drug interactions</span></article><article><b>LexGLUE SCOTUS</b><span>Legal issue areas</span></article></div></section>
+<section><p class="eyebrow">THE CONTRACT</p><ol><li><b>One bounded change.</b><br>Make the intervention interpretable.</li><li><b>One sealed fence.</b><br>Develop locally; score heldout once.</li><li><b>One honest receipt.</b><br>Publish seeds, costs, failures, and artifacts.</li></ol></section>
+</main><footer>Built for curious hill climbers by Synth Laboratories.</footer></body></html>

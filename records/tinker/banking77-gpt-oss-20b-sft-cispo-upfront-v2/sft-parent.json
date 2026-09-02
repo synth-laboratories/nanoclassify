@@ -1,0 +1,6 @@
+{
+  "path": "records/tinker/banking77-gpt-oss-20b-sft-v1/sft.json",
+  "sampler_checkpoint": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/sampler_weights/nanoclassify-banking77-sft-sampler",
+  "schema": "nanoclassify.tinker-sft-parent.v1",
+  "state_checkpoint": "tinker://4c964dc0-2a62-54ee-90f3-826c35383856:train:0/weights/nanoclassify-banking77-sft-state"
+}

@@ -1,0 +1,39 @@
+name: Experiment proposal
+description: Propose one reproducible classification hill-climb experiment.
+title: "[experiment] "
+labels: [experiment]
+body:
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      options: [Banking77, ChemProt, DDI2013, LexGLUE SCOTUS]
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: Parent submission or receipt
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis and single bounded change
+    validations:
+      required: true
+  - type: textarea
+    id: budget
+    attributes:
+      label: Data, compute, seeds, and maximum cost
+    validations:
+      required: true
+  - type: checkboxes
+    id: contract
+    attributes:
+      label: Experiment contract
+      options:
+        - label: I will not use or request heldout membership, labels, or per-example predictions.
+          required: true
+        - label: I will publish aggregate results even if the experiment regresses.
+          required: true

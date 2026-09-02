@@ -1,0 +1,14 @@
+{
+  "schema": "nanoclassify.leaderboard.v1",
+  "task": "banking77",
+  "updated": "2026-09-02",
+  "development": [
+    {"rank": 1, "submission": "tinker-sft-cispo-v5-64r-50u", "model": "openai/gpt-oss-20b", "accuracy": 0.8775, "macro_f1": 0.8678434048584022, "valid_label_rate": 1.0, "sample_size": 400, "record": "records/tinker/banking77-gpt-oss-20b-cispo-v5-64r-50u"},
+    {"rank": 2, "submission": "tinker-sft-v1", "model": "openai/gpt-oss-20b", "accuracy": 0.875, "macro_f1": 0.8629230705454018, "valid_label_rate": 1.0, "sample_size": 400, "record": "records/tinker/banking77-gpt-oss-20b-sft-v1"}
+  ],
+  "sealed_heldout": [
+    {"rank": 1, "submission": "tinker-sft-v1", "model": "openai/gpt-oss-20b", "accuracy": 0.5125, "macro_f1": 0.5394710956509838, "valid_label_rate": 1.0, "sample_size": 400, "record": "records/tinker/banking77-gpt-oss-20b-sft-v1/official-heldout-400"},
+    {"rank": 2, "submission": "gepa-large-v5-frontier", "model": "openai/gpt-oss-20b", "accuracy": 0.4475, "macro_f1": 0.48185, "sample_size": 400, "record": "records/banking77-gepa-oss20b-large-v5-heldout"},
+    {"rank": 3, "submission": "base", "model": "openai/gpt-oss-20b", "accuracy": 0.3525, "macro_f1": 0.401, "sample_size": 400, "record": "records/banking77-hard-v5-tinker-gpt-oss-20b-base-400-seed-20260906"}
+  ]
+}

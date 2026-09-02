@@ -1,0 +1,695 @@
+{
+  "Refund_not_showing_up": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 3,
+    "true_positive": 3
+  },
+  "activate_my_card": {
+    "f1": 0.4,
+    "false_negative": 2,
+    "false_positive": 4,
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "support": 4,
+    "true_positive": 2
+  },
+  "age_limit": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 3,
+    "true_positive": 3
+  },
+  "apple_pay_or_google_pay": {
+    "f1": 0.5,
+    "false_negative": 1,
+    "false_positive": 1,
+    "precision": 0.5,
+    "recall": 0.5,
+    "support": 2,
+    "true_positive": 1
+  },
+  "atm_support": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 3,
+    "true_positive": 3
+  },
+  "automatic_top_up": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 1,
+    "true_positive": 1
+  },
+  "balance_not_updated_after_bank_transfer": {
+    "f1": 0.14285714285714288,
+    "false_negative": 10,
+    "false_positive": 2,
+    "precision": 0.3333333333333333,
+    "recall": 0.09090909090909091,
+    "support": 11,
+    "true_positive": 1
+  },
+  "balance_not_updated_after_cheque_or_cash_deposit": {
+    "f1": 0.8000000000000002,
+    "false_negative": 1,
+    "false_positive": 1,
+    "precision": 0.8,
+    "recall": 0.8,
+    "support": 5,
+    "true_positive": 4
+  },
+  "beneficiary_not_allowed": {
+    "f1": 0.2666666666666667,
+    "false_negative": 11,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.15384615384615385,
+    "support": 13,
+    "true_positive": 2
+  },
+  "cancel_transfer": {
+    "f1": 0.6666666666666666,
+    "false_negative": 3,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.5,
+    "support": 6,
+    "true_positive": 3
+  },
+  "card_about_to_expire": {
+    "f1": 0.6666666666666665,
+    "false_negative": 2,
+    "false_positive": 1,
+    "precision": 0.75,
+    "recall": 0.6,
+    "support": 5,
+    "true_positive": 3
+  },
+  "card_acceptance": {
+    "f1": 0.3333333333333333,
+    "false_negative": 1,
+    "false_positive": 3,
+    "precision": 0.25,
+    "recall": 0.5,
+    "support": 2,
+    "true_positive": 1
+  },
+  "card_arrival": {
+    "f1": 0.3333333333333333,
+    "false_negative": 4,
+    "false_positive": 4,
+    "precision": 0.3333333333333333,
+    "recall": 0.3333333333333333,
+    "support": 6,
+    "true_positive": 2
+  },
+  "card_delivery_estimate": {
+    "f1": 0.3,
+    "false_negative": 3,
+    "false_positive": 11,
+    "precision": 0.21428571428571427,
+    "recall": 0.5,
+    "support": 6,
+    "true_positive": 3
+  },
+  "card_linking": {
+    "f1": 0.5,
+    "false_negative": 5,
+    "false_positive": 1,
+    "precision": 0.75,
+    "recall": 0.375,
+    "support": 8,
+    "true_positive": 3
+  },
+  "card_not_working": {
+    "f1": 0.5714285714285715,
+    "false_negative": 1,
+    "false_positive": 2,
+    "precision": 0.5,
+    "recall": 0.6666666666666666,
+    "support": 3,
+    "true_positive": 2
+  },
+  "card_payment_fee_charged": {
+    "f1": 0.4615384615384615,
+    "false_negative": 3,
+    "false_positive": 4,
+    "precision": 0.42857142857142855,
+    "recall": 0.5,
+    "support": 6,
+    "true_positive": 3
+  },
+  "card_payment_not_recognised": {
+    "f1": 0.33333333333333337,
+    "false_negative": 2,
+    "false_positive": 10,
+    "precision": 0.23076923076923078,
+    "recall": 0.6,
+    "support": 5,
+    "true_positive": 3
+  },
+  "card_payment_wrong_exchange_rate": {
+    "f1": 0.28571428571428575,
+    "false_negative": 2,
+    "false_positive": 3,
+    "precision": 0.25,
+    "recall": 0.3333333333333333,
+    "support": 3,
+    "true_positive": 1
+  },
+  "card_swallowed": {
+    "f1": 0.888888888888889,
+    "false_negative": 0,
+    "false_positive": 1,
+    "precision": 0.8,
+    "recall": 1.0,
+    "support": 4,
+    "true_positive": 4
+  },
+  "cash_withdrawal_charge": {
+    "f1": 0.5454545454545454,
+    "false_negative": 0,
+    "false_positive": 5,
+    "precision": 0.375,
+    "recall": 1.0,
+    "support": 3,
+    "true_positive": 3
+  },
+  "cash_withdrawal_not_recognised": {
+    "f1": 0.0,
+    "false_negative": 4,
+    "false_positive": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 4,
+    "true_positive": 0
+  },
+  "change_pin": {
+    "f1": 0.0,
+    "false_negative": 0,
+    "false_positive": 13,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "true_positive": 0
+  },
+  "compromised_card": {
+    "f1": 0.36363636363636365,
+    "false_negative": 1,
+    "false_positive": 6,
+    "precision": 0.25,
+    "recall": 0.6666666666666666,
+    "support": 3,
+    "true_positive": 2
+  },
+  "contactless_not_working": {
+    "f1": 0.5,
+    "false_negative": 2,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "support": 3,
+    "true_positive": 1
+  },
+  "country_support": {
+    "f1": 0.8,
+    "false_negative": 0,
+    "false_positive": 2,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "support": 4,
+    "true_positive": 4
+  },
+  "declined_card_payment": {
+    "f1": 0.33333333333333337,
+    "false_negative": 0,
+    "false_positive": 12,
+    "precision": 0.2,
+    "recall": 1.0,
+    "support": 3,
+    "true_positive": 3
+  },
+  "declined_cash_withdrawal": {
+    "f1": 0.6666666666666666,
+    "false_negative": 0,
+    "false_positive": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "support": 1,
+    "true_positive": 1
+  },
+  "declined_transfer": {
+    "f1": 0.125,
+    "false_negative": 9,
+    "false_positive": 5,
+    "precision": 0.16666666666666666,
+    "recall": 0.1,
+    "support": 10,
+    "true_positive": 1
+  },
+  "direct_debit_payment_not_recognised": {
+    "f1": 0.5,
+    "false_negative": 4,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "support": 6,
+    "true_positive": 2
+  },
+  "disposable_card_limits": {
+    "f1": 0.5714285714285715,
+    "false_negative": 2,
+    "false_positive": 1,
+    "precision": 0.6666666666666666,
+    "recall": 0.5,
+    "support": 4,
+    "true_positive": 2
+  },
+  "edit_personal_details": {
+    "f1": 0.9090909090909091,
+    "false_negative": 0,
+    "false_positive": 1,
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "support": 5,
+    "true_positive": 5
+  },
+  "exchange_charge": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 3,
+    "true_positive": 3
+  },
+  "exchange_rate": {
+    "f1": 0.6666666666666666,
+    "false_negative": 0,
+    "false_positive": 4,
+    "precision": 0.5,
+    "recall": 1.0,
+    "support": 4,
+    "true_positive": 4
+  },
+  "exchange_via_app": {
+    "f1": 0.4444444444444444,
+    "false_negative": 1,
+    "false_positive": 4,
+    "precision": 0.3333333333333333,
+    "recall": 0.6666666666666666,
+    "support": 3,
+    "true_positive": 2
+  },
+  "extra_charge_on_statement": {
+    "f1": 0.5555555555555556,
+    "false_negative": 6,
+    "false_positive": 2,
+    "precision": 0.7142857142857143,
+    "recall": 0.45454545454545453,
+    "support": 11,
+    "true_positive": 5
+  },
+  "failed_transfer": {
+    "f1": 0.4615384615384615,
+    "false_negative": 2,
+    "false_positive": 5,
+    "precision": 0.375,
+    "recall": 0.6,
+    "support": 5,
+    "true_positive": 3
+  },
+  "fiat_currency_support": {
+    "f1": 0.36363636363636365,
+    "false_negative": 1,
+    "false_positive": 6,
+    "precision": 0.25,
+    "recall": 0.6666666666666666,
+    "support": 3,
+    "true_positive": 2
+  },
+  "get_disposable_virtual_card": {
+    "f1": 0.5,
+    "false_negative": 2,
+    "false_positive": 2,
+    "precision": 0.5,
+    "recall": 0.5,
+    "support": 4,
+    "true_positive": 2
+  },
+  "get_physical_card": {
+    "f1": 0.0,
+    "false_negative": 14,
+    "false_positive": 7,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 14,
+    "true_positive": 0
+  },
+  "getting_spare_card": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 4,
+    "true_positive": 4
+  },
+  "getting_virtual_card": {
+    "f1": 0.6666666666666665,
+    "false_negative": 2,
+    "false_positive": 1,
+    "precision": 0.75,
+    "recall": 0.6,
+    "support": 5,
+    "true_positive": 3
+  },
+  "lost_or_stolen_card": {
+    "f1": 0.8750000000000001,
+    "false_negative": 0,
+    "false_positive": 2,
+    "precision": 0.7777777777777778,
+    "recall": 1.0,
+    "support": 7,
+    "true_positive": 7
+  },
+  "lost_or_stolen_phone": {
+    "f1": 0.8571428571428571,
+    "false_negative": 1,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.75,
+    "support": 4,
+    "true_positive": 3
+  },
+  "order_physical_card": {
+    "f1": 0.3478260869565218,
+    "false_negative": 13,
+    "false_positive": 2,
+    "precision": 0.6666666666666666,
+    "recall": 0.23529411764705882,
+    "support": 17,
+    "true_positive": 4
+  },
+  "passcode_forgotten": {
+    "f1": 0.8,
+    "false_negative": 0,
+    "false_positive": 3,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "support": 6,
+    "true_positive": 6
+  },
+  "pending_card_payment": {
+    "f1": 0.8750000000000001,
+    "false_negative": 0,
+    "false_positive": 2,
+    "precision": 0.7777777777777778,
+    "recall": 1.0,
+    "support": 7,
+    "true_positive": 7
+  },
+  "pending_cash_withdrawal": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 2,
+    "true_positive": 2
+  },
+  "pending_top_up": {
+    "f1": 0.4,
+    "false_negative": 2,
+    "false_positive": 4,
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "support": 4,
+    "true_positive": 2
+  },
+  "pending_transfer": {
+    "f1": 0.14285714285714288,
+    "false_negative": 5,
+    "false_positive": 7,
+    "precision": 0.125,
+    "recall": 0.16666666666666666,
+    "support": 6,
+    "true_positive": 1
+  },
+  "pin_blocked": {
+    "f1": 0.33333333333333337,
+    "false_negative": 4,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.2,
+    "support": 5,
+    "true_positive": 1
+  },
+  "receiving_money": {
+    "f1": 0.375,
+    "false_negative": 4,
+    "false_positive": 6,
+    "precision": 0.3333333333333333,
+    "recall": 0.42857142857142855,
+    "support": 7,
+    "true_positive": 3
+  },
+  "request_refund": {
+    "f1": 0.5454545454545454,
+    "false_negative": 1,
+    "false_positive": 4,
+    "precision": 0.42857142857142855,
+    "recall": 0.75,
+    "support": 4,
+    "true_positive": 3
+  },
+  "reverted_card_payment?": {
+    "f1": 0.6666666666666666,
+    "false_negative": 1,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.5,
+    "support": 2,
+    "true_positive": 1
+  },
+  "supported_cards_and_currencies": {
+    "f1": 0.16666666666666669,
+    "false_negative": 9,
+    "false_positive": 1,
+    "precision": 0.5,
+    "recall": 0.1,
+    "support": 10,
+    "true_positive": 1
+  },
+  "terminate_account": {
+    "f1": 0.6666666666666666,
+    "false_negative": 0,
+    "false_positive": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "support": 1,
+    "true_positive": 1
+  },
+  "top_up_by_bank_transfer_charge": {
+    "f1": 0.125,
+    "false_negative": 8,
+    "false_positive": 6,
+    "precision": 0.14285714285714285,
+    "recall": 0.1111111111111111,
+    "support": 9,
+    "true_positive": 1
+  },
+  "top_up_by_card_charge": {
+    "f1": 0.5,
+    "false_negative": 2,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "support": 3,
+    "true_positive": 1
+  },
+  "top_up_by_cash_or_cheque": {
+    "f1": 0.8,
+    "false_negative": 2,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "support": 6,
+    "true_positive": 4
+  },
+  "top_up_failed": {
+    "f1": 0.6666666666666666,
+    "false_negative": 2,
+    "false_positive": 2,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "support": 6,
+    "true_positive": 4
+  },
+  "top_up_limits": {
+    "f1": 0.9090909090909091,
+    "false_negative": 0,
+    "false_positive": 1,
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "support": 5,
+    "true_positive": 5
+  },
+  "top_up_reverted": {
+    "f1": 0.4,
+    "false_negative": 1,
+    "false_positive": 2,
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "support": 2,
+    "true_positive": 1
+  },
+  "topping_up_by_card": {
+    "f1": 0.0,
+    "false_negative": 10,
+    "false_positive": 4,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 10,
+    "true_positive": 0
+  },
+  "transaction_charged_twice": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 2,
+    "true_positive": 2
+  },
+  "transfer_fee_charged": {
+    "f1": 0.3636363636363636,
+    "false_negative": 3,
+    "false_positive": 4,
+    "precision": 0.3333333333333333,
+    "recall": 0.4,
+    "support": 5,
+    "true_positive": 2
+  },
+  "transfer_into_account": {
+    "f1": 0.3333333333333333,
+    "false_negative": 6,
+    "false_positive": 2,
+    "precision": 0.5,
+    "recall": 0.25,
+    "support": 8,
+    "true_positive": 2
+  },
+  "transfer_not_received_by_recipient": {
+    "f1": 0.25,
+    "false_negative": 8,
+    "false_positive": 4,
+    "precision": 0.3333333333333333,
+    "recall": 0.2,
+    "support": 10,
+    "true_positive": 2
+  },
+  "transfer_timing": {
+    "f1": 0.23529411764705882,
+    "false_negative": 0,
+    "false_positive": 13,
+    "precision": 0.13333333333333333,
+    "recall": 1.0,
+    "support": 2,
+    "true_positive": 2
+  },
+  "unable_to_verify_identity": {
+    "f1": 0.5454545454545454,
+    "false_negative": 3,
+    "false_positive": 2,
+    "precision": 0.6,
+    "recall": 0.5,
+    "support": 6,
+    "true_positive": 3
+  },
+  "verify_my_identity": {
+    "f1": 0.6153846153846153,
+    "false_negative": 2,
+    "false_positive": 3,
+    "precision": 0.5714285714285714,
+    "recall": 0.6666666666666666,
+    "support": 6,
+    "true_positive": 4
+  },
+  "verify_source_of_funds": {
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 1,
+    "true_positive": 1
+  },
+  "verify_top_up": {
+    "f1": 0.888888888888889,
+    "false_negative": 1,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.8,
+    "support": 5,
+    "true_positive": 4
+  },
+  "virtual_card_not_working": {
+    "f1": 0.5,
+    "false_negative": 2,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "support": 3,
+    "true_positive": 1
+  },
+  "visa_or_mastercard": {
+    "f1": 0.6666666666666666,
+    "false_negative": 2,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.5,
+    "support": 4,
+    "true_positive": 2
+  },
+  "why_verify_identity": {
+    "f1": 0.3333333333333333,
+    "false_negative": 3,
+    "false_positive": 1,
+    "precision": 0.5,
+    "recall": 0.25,
+    "support": 4,
+    "true_positive": 1
+  },
+  "wrong_amount_of_cash_received": {
+    "f1": 0.823529411764706,
+    "false_negative": 2,
+    "false_positive": 1,
+    "precision": 0.875,
+    "recall": 0.7777777777777778,
+    "support": 9,
+    "true_positive": 7
+  },
+  "wrong_exchange_rate_for_cash_withdrawal": {
+    "f1": 0.42857142857142855,
+    "false_negative": 8,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.2727272727272727,
+    "support": 11,
+    "true_positive": 3
+  }
+}

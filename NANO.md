@@ -6,8 +6,16 @@ loading it. The shared source project is `nano-standard`; clones need no sibling
 checkout. `nano.json` is this repository's explicit adapter/track/lane registry.
 
 ```bash
-python3 nano.py doctor
-python3 nano.py --help
+uv run --no-project python nano.py doctor
+uv run --no-project python nano.py --help
+```
+
+`uv run --no-project` runs the standard-library CLI without resolving the Nano
+project's dependencies or changing its lockfile. Use Python 3.11 or newer. For an
+installed interpreter with no network access, use:
+
+```bash
+uv run --offline --no-python-downloads --no-project --python python3 python nano.py doctor
 ```
 
 All commands resolve the benchmark root from the launcher. Run relative input
@@ -31,17 +39,60 @@ promote a result onto an official board. Existing native official protocols
 retain their own admission paths. `mode=official` is rejected here until an audited
 common adapter is admitted. No historical result is relabeled.
 
+## Set up the native runtime with uv
+
+Contract checks, packaging and previews need only the commands above. Before
+executing training or an evaluator, prepare that repository's environment from
+its root:
+
+| Repository | Setup | Additional runtime requirements |
+|---|---|---|
+| NanoHorizon | `uv sync --locked` | Native Craftax facade and the selected MLX/provider runtime; follow README and TRAIN_EVAL. The MLX runtime is a separate sibling environment. |
+| NanoCoop | `uv sync --locked` | Native DungeonGrid runtime and a valid domain plan. |
+| NanoAlign | `uv sync --locked --extra dev` | Runtime/model/provider setup for the selected track; this includes local test dependencies. |
+| NanoClassify | `uv sync` | This checkout has no uv.lock yet; review the generated lock before committing. Install the selected provider runtime as documented by its native evaluator. |
+| NanoProgram | `uv sync --locked` | Python 3.14+ and the local `../synth-lab` dependency declared in pyproject.toml, plus the selected task containers. |
+
+These commands install declared project dependencies. They do not provision
+models, containers, provider credentials or optional runtimes omitted from the
+project manifest. A locked sync that fails because source and lock disagree is a
+reconciliation task: review the dependency change before updating the lock.
+
+Once prepared, `uv run --no-sync python nano.py ...` uses the project interpreter
+without resynchronizing it. Python-based native adapters inherit that interpreter;
+`NANO_PYTHON` can explicitly select a different prepared environment. Shell-based
+adapters retain their native interpreter-selection logic: check the printed
+command and the domain setup instructions, particularly NanoHorizon's MLX setup.
+Keep credentials in already-authorized local environment/.env flows; the shared
+CLI does not load a .env automatically.
+
 ## Submission workflow
 
-Pick track, lane, artifact type and adapter from `doctor`. Example for Horizon:
+Pick track, lane, artifact type and adapter from `doctor`:
+
+| Repo / track | `--track` | `--artifact-type` | `--adapter` |
+|---|---|---|---|
+| NanoHorizon | `policy-improvement` | `policy` or `mlx-lora` | `craftax` |
+| NanoCoop monitor | `monitor_steer` | `monitor` | `monitor-steer` |
+| NanoCoop RL | `cooperative_rl` | `policy` | `cooperative-rl` |
+| NanoAlign 1 | `track1` | `policy` | `track1-transfer` |
+| NanoAlign 2 | `track2` | `monitor` | `track2-native` |
+| NanoAlign 3 | `track3` | `policy` | `track3-fixture` |
+| NanoAlign 4 | `track4` | `policy` | `track4-actual` |
+| NanoClassify | `classification` | `checkpoint` or `policy` | `banking77` |
+| NanoProgram | `prompt-optimization` | `optimizer` | `optimizer` |
+
+All rows support `--lane local-development`. Use the values for your repo in the
+following Horizon example. The scaffold is not runnable until you implement the
+native candidate interface:
 
 ```bash
-python3 nano.py init-submission submissions/my-method --track policy-improvement --lane local-development --artifact-type policy
+uv run --no-project python nano.py init-submission submissions/my-method --track policy-improvement --lane local-development --artifact-type policy
 # Implement candidate.py and train.py; edit submission.json entrypoints,
 # explicit file list and provenance to match the native domain interface.
-python3 nano.py package submissions/my-method/submission.json
-python3 nano.py validate submissions/my-method/submission.packaged.json
-python3 nano.py init-protocol --submission submissions/my-method/submission.packaged.json --adapter craftax --output development-protocol.json
+uv run --no-project python nano.py package submissions/my-method/submission.json
+uv run --no-project python nano.py validate submissions/my-method/submission.packaged.json
+uv run --no-project python nano.py init-protocol --submission submissions/my-method/submission.packaged.json --adapter craftax --output development-protocol.json
 ```
 
 Templates intentionally fail until implemented. `train.py` accepts `--out`;
@@ -65,13 +116,27 @@ does not translate arbitrary domain plans or prove that a native evaluator obeye
 the declared case allocation.
 
 ```bash
-python3 nano.py plan --submission submissions/my-method/submission.packaged.json --protocol development-protocol.json --output plan.json
-python3 nano.py train --submission submissions/my-method/submission.packaged.json --plan plan.json --output results/train-001
-python3 nano.py evaluate --submission submissions/my-method/submission.packaged.json --plan plan.json --output results/eval-001
+uv run --no-project python nano.py plan --submission submissions/my-method/submission.packaged.json --protocol development-protocol.json --output plan.json
+uv run --no-project python nano.py train --submission submissions/my-method/submission.packaged.json --plan plan.json --output results/train-001
+uv run --no-project python nano.py evaluate --submission submissions/my-method/submission.packaged.json --plan plan.json --output results/eval-001
 ```
 
-These print the exact command without running it. Add `--execute` to invoke the
-frozen command. That may incur the native provider's charges: use the domain's
+These print the exact command without running it. After implementing the
+candidate, replacing the protocol's dummy case/`--help` arguments, freezing the
+plan and preparing the native environment, execute with:
+
+```bash
+uv run --no-sync python nano.py train --submission submissions/my-method/submission.packaged.json --plan plan.json --output results/train-001 --execute
+uv run --no-sync python nano.py evaluate --submission submissions/my-method/submission.packaged.json --plan plan.json --output results/eval-001 --execute
+```
+
+Use new output directories for each attempt; existing outputs are never
+overwritten. An inference-only or optimizer submission can omit the train step.
+The plan must name the candidate artifact actually passed to the native evaluator;
+when training produces a new immutable candidate, package that output and freeze
+its evaluation plan before evaluation.
+
+`--execute` invokes the frozen command. That may incur the native provider's charges: use the domain's
 normal authorized budget workflow. Common execution imposes a process-group wall
 timeout; dollar/token admission stays in the native evaluator. It inherits the
 existing environment and never reads Keychain or loads secrets automatically.
@@ -88,9 +153,9 @@ Never put credential values in command arguments or public receipt bundles.
 ## Evidence verification
 
 ```bash
-python3 nano.py result-template --plan plan.json --output result.json
+uv run --no-project python nano.py result-template --plan plan.json --output result.json
 # The native evaluator/exporter populates the result with measured evidence.
-python3 nano.py verify --plan plan.json --result result.json --evidence-root results/eval-001
+uv run --no-project python nano.py verify --plan plan.json --result result.json --evidence-root results/eval-001
 ```
 
 Each case result needs `id`, `case_digest` (canonical SHA-256 of the planned

@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "sha256": "79dc8a6f8e4447d82f77bb3ed07ed4c6ddee09cb488956913278650d1afb6319",
+  "source": "nano-standard",
+  "contract": "nano.*.v1",
+  "source_commit": "e678bd26ccbc3a2825375746a3a917eb013ea90e"
+}

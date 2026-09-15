@@ -1,0 +1,40 @@
+{
+  "schema": "nano.benchmark.v1",
+  "id": "nanoclassify",
+  "release_status": "development",
+  "tracks": {
+    "classification": {
+      "artifact_types": [
+        "checkpoint",
+        "policy"
+      ],
+      "lanes": [
+        "local-development"
+      ],
+      "editable": [
+        "declared submission artifact and recipe"
+      ],
+      "frozen": [
+        "domain environment",
+        "evaluation cases",
+        "budget and ranking protocol"
+      ]
+    }
+  },
+  "lanes": {
+    "local-development": {
+      "status": "development-only",
+      "description": "Declared comparison class; this adapter has no common official admission."
+    }
+  },
+  "adapters": {
+    "banking77": {
+      "track": "classification",
+      "argv": [
+        "{python}",
+        "scripts/eval_tinker_banking77.py"
+      ],
+      "official_verified": false
+    }
+  }
+}
